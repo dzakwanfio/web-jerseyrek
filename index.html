@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Jersey Rek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="assets/Group.png" alt="Sewa Custom Jersey">
+            <nav>
+                <a href="#about-section">TENTANG</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-button" onclick="toggleDropdown()">ORDER</a>
+                    <div class="dropdown-content">
+                        <a href="#custom-section">Custom</a> <!-- Link ke Custom Section -->
+                        <a href="#rental-section">Sewa</a> <!-- Link ke Rental Section -->
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="welcome-section">
+            <img src="assets/wlcm.png" alt="Welcome to Jersey Rek">
+        </div>
+    </header>
+
+    <section class="about-section" id="about-section">
+        <img src="assets/jerseyku.png" alt="Jersey Rek Logo" class="logo">
+        <p><strong>JERSEY REK</strong> diciptakan untuk memenuhi kebutuhan Jersey Anda. <br> Baik <strong>penyewaan</strong> jersey maupun <strong>custom</strong> jersey
+        </p>
+        <p>Kami mengawali ditahun 2022 dengan membuka penyewaan jersey di kota Malang. <br> kini melebarkan sayap di kota Surabaya.
+        </p>
+        <p>Tidak hanya itu, kami juga memulai menaikan usaha ini dengan siap melayani Custom Jersey anda. <br> Tentu dengan harga terbaik dan bahan berkualitas dan juga pelayanan yang bersahabat
+        </p>
+        <p><strong>MARI MENJADI MITRA KAMI REK!</strong></p>
+    </section>
+
+    <section class="locations-section">
+        <div class="header">
+            <h2>LOKASI KAMI</h2>
+            <img src="assets/jerseyku.png" alt="Jersey Rek Logo" class="logo1">
+        </div>
+        <div class="locations">
+            <!-- Link WhatsApp untuk Malang -->
+            <a href="https://wa.me/6285831129031?text=Halo,%20Jersey%20Rek%20Saya%20ingin%20sewa%20jersey " target="_blank"> <!-- Ganti dengan nomor WhatsApp Malang -->
+                <img src="assets/mlg.png" alt="Malang" class="location-image" id="malang">
+            </a>
+    
+            <!-- Link WhatsApp untuk Surabaya -->
+            <a href="https://wa.me/6288991381189?text=Halo,%20Jersey%20Rek%20Saya%20ingin%20sewa%20jersey " target="_blank"> <!-- Ganti dengan nomor WhatsApp Surabaya -->
+                <img src="assets/sby.png" alt="Surabaya" class="location-image" id="surabaya">
+            </a>
+        </div>
+    </section>
+    
+
+    <section class="custom-section" id="custom-section">
+        <img src="assets/jerseyku.png" alt="Jersey Rek Logo" class="logo2">
+        <h1>CUSTOM JERSEY</h1>
+        <p>HARGA MULAI 85K<br>HINGGA KUALITAS TINGGI DENGAN LOGO 3D</p>
+        <p>INFO KATALOG HARGA ATAU PEMESANAN<br>SILAHKAN KLIK LINK DI BAWAH INI</p>
+        <div class="buttons">
+            <a href="https://wa.me/6285735735631?text=Halo,%20Jersey%20Rek%20Saya%20ingin%20pesan%20jersey%20" target="_blank">
+                <button class="catalog-button">Catalog by Admin</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Bagian Rental dengan ID 'rental-section' -->
+    <section class="rental-section" id="rental-section">
+        <img src="assets/jerseyku.png" alt="Jersey Rek Logo" class="logo3">
+        <h1>SEWA JERSEY</h1>
+        <p>JANGAN KHAWATIR JIKA BELUM PUNYA JERSEY TEAM<br>NAMUN KEBUTUHAN MENDADAK</p>
+        <p>SILAHKAN SEWA JERSEY DIBAWAH INI</p>
+        <div class="buttons">
+            <a href="https://wa.me/6285831129031?text=Halo,%20Jersey%20Rek%20Saya%20ingin%20sewa%20jersey " target="_blank">
+                <button class="malang-button">Personal Admin Malang</button>
+            </a>
+            <a href="https://wa.me/6288991381189?text=Halo,%20Jersey%20Rek%20Saya%20ingin%20sewa%20jersey " target="_blank">
+                <button class="surabaya-button">Personal Admin Surabaya</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- JavaScript untuk toggle dropdown -->
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            // Cek apakah dropdown sudah terlihat atau tidak
+            if (dropdownContent.style.display === 'block') {
+                dropdownContent.style.display = 'none'; // Sembunyikan dropdown
+            } else {
+                dropdownContent.style.display = 'block'; // Tampilkan dropdown
+            }
+        }
+
+        // Menutup dropdown jika mengklik di luar area dropdown
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                var dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(function(dropdown) {
+                    if (dropdown.style.display === 'block') {
+                        dropdown.style.display = 'none';
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
